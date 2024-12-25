@@ -1,0 +1,1 @@
+{{setting('website_inactive_message')}}

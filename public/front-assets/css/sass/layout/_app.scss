@@ -1,0 +1,106 @@
+// Silde
+.app {
+    row-gap: 24px;
+    min-height: calc(100vh - 87.78px - 112.44px);
+    padding-top: 1rem;
+}
+.slide-user {
+    border: 1px solid #dcdcdc;
+    border-radius: 18px;
+    padding: 2rem;
+    font-weight: bold;
+    .card-slide {
+        // box-shadow: 0px 8px 10px 0 #00968314;
+        text-align: center;
+        font-weight: 500;
+        color: #000000;
+        .img-user {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-color: $light-color;
+            object-fit: cover;
+        }
+        h6 {
+            margin: 0 !important;
+            font-size: 16px !important;
+            text-decoration-line: underline;
+        }
+        .badge-info {
+            margin: 17px 0 20px 0 !important;
+            opacity: 0.5;
+            padding: 0 !important;
+            font-weight: unset !important;
+            color: #000000 !important;
+            font-size: 14px !important;
+            background-color: transparent !important;
+        }
+        .btn-more-lg {
+            margin: 0 auto;
+            min-width: 150px;
+        }
+        .btn-icon {
+            padding: 20px 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 5px !important;
+            font-size: 16px !important;
+            color: #000000 !important;
+            font-weight: normal !important;
+            &::after {
+                content: "";
+                width: calc(100% + 4rem);
+                opacity: 0.1;
+                height: 1px;
+                position: absolute;
+                background-color: #000000;
+                left: -2rem;
+                top: -0.5px;
+            }
+            .icon {
+                color: #000000 !important;
+                width: auto !important;
+                height: auto !important;
+                border: 0 !important;
+                font-size: 16px !important;
+                svg,
+                i {
+                    width: auto !important;
+                }
+            }
+        }
+    }
+    .btn-blue-slide {
+        background-color: #00b5f0;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0.8rem;
+        font-size: 13px;
+        transition: $transition;
+        &:hover {
+            background-color: #02ade5;
+        }
+    }
+}
+.app-content {
+    margin-bottom: 3rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 18px;
+    padding: 2rem;
+    .under-line-before {
+        position: relative;
+        margin-bottom: 81px;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -40.5px;
+            left: calc(-2rem - -8px);
+            width: calc(100% + 4rem - 16px);
+            height: 1px;
+            background-color: #dcdcdc;
+        }
+    }
+}

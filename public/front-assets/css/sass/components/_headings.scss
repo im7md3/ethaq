@@ -1,0 +1,61 @@
+// Heads
+.main-lg-head {
+//   color: $green-color;
+  color: $main-color;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+}
+
+.title-btm-border {
+  padding-bottom: 0.3rem;
+    font-size: 20px;
+    color: $green-color;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    position: relative;
+    &::before {
+      content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    height: 3px;
+    width: 50px;
+    background-color: $green-color;
+    }
+}
+
+// Box Text
+.box-title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .title {
+        color: $grey-color-dark;
+        font-size: 32px;
+        font-weight: 700;
+        @include maxWidth(md) {
+            font-size: 20px;
+        }
+        span {
+            background: #CDD5F0;
+border-radius: 4px;
+padding-right:6px;
+        }
+    }
+    .sub {
+        font-size: 16px;
+        color: $grey-color-dark;
+        font-weight: 500;
+        @include maxWidth(md) {
+            font-size: 14px;
+        }
+    }
+}
+
+// Texts
+.main-text {
+  font-size: 17px;
+    color: white;
+    line-height: 1.9;
+}

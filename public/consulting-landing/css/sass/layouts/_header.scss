@@ -1,0 +1,50 @@
+.main-nav {
+  background-color: transparent;
+  color: #444444;
+  font-size: 16px;
+  .container {
+    flex-wrap: nowrap;
+      h1 {
+        .navbar-brand {
+          img {
+            width: auto;
+            height: 63px;
+          }
+        }
+      }
+    .items {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      .text-item {
+        color: #000000;
+      }
+      .icon-item {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        color: $orange-color;
+        border: 1px solid #C9CACA;
+      }
+    }
+  }
+  @include maxWidth(sm) {
+    font-size: 14px;
+    .navbar-brand {
+        img {
+          width: 140px !important;
+          height: auto !important;
+        }
+      }
+    .items {
+        gap: 5px !important;
+        .icon-item {
+            width: 30px !important;
+            height: 30px !important;
+          }
+    }
+  }
+}

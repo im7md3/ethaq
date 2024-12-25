@@ -1,0 +1,8 @@
+<?php
+return [
+    'clients'=>['create_order','create_offer_on_order','choose_judger','accept_judger_for_judger','send_contract','change_order_status','delivery_order','add_objection','suggested_duration','judger_judgment','decision_vendor_duration','objection_vendor','create_objection_talk','add_new_event','create_offer_on_consultation','new_enquiry_on_order','success_refund_amount','refused_refund_amount','success_withdrawal_amount','refused_withdrawal_amount','code_for_accepted_contract'],
+
+    'vendors'=>['create_order','create_consultation','accept_offer_on_order','rejected_offer_on_order','accept_client_for_judger','accept_judger_for_judger','send_contract','accept_contract','change_order_status','refused_delivery_order','accept_delivery_order','add_objection','suggested_duration','judger_judgment','decision_client_duration','objection_client','create_objection_talk','active_consultation','evaluate_consultation','choose_on_consultation','accepted_on_consultation','end_consultation','new_enquiry_on_order','success_refund_amount','refused_refund_amount','success_withdrawal_amount','refused_withdrawal_amount','Accept_or_refused_license'],
+
+    'judgers'=>['accept_client_for_judger','change_order_status','add_objection','decision_client_duration','decision_vendor_duration','objection_client','objection_vendor','forward_the_order_to_you','success_refund_amount','refused_refund_amount','success_withdrawal_amount','refused_withdrawal_amount']
+];

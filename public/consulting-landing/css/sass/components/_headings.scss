@@ -1,0 +1,21 @@
+.heading-section {
+  margin-bottom: 60px;
+  text-align: center;
+  .title {
+    font-weight: 600;
+    font-size: 40px;
+    color: $title-color;
+  }
+  .des {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 0;
+    color: #777777;
+  }
+}
+.sm-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 10px;
+}

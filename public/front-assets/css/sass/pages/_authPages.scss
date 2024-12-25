@@ -1,0 +1,272 @@
+// Start Login And Reseat
+.section-login {
+    .login-image {
+        height: 100%;
+        width: 50%;
+        @include maxWidth(md) {
+            display: none;
+        }
+        > img {
+            height: 100%;
+            box-shadow: $shadow-green;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            width: 75%;
+        }
+    }
+    @include maxWidth(md) {
+        .login-image {
+            text-align: center !important;
+        }
+        .box-login {
+            margin: auto;
+        }
+    }
+    .box-login {
+        @include centering;
+        height: 100%;
+        padding: 20px;
+        background-color: $light-color;
+        border-radius: 10px;
+        box-shadow: $shadow-green;
+        max-width: 400px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        width: 50%;
+        @include maxWidth(md) {
+            width: 100%;
+        }
+    }
+    .img-login {
+        max-height: 360px;
+    }
+
+    .btn-resend {
+        display: none;
+    }
+}
+// End Login And Reseat
+.card-user {
+}
+// Start register
+.section-register {
+    .h-page{
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .card-user {
+        min-height: 100% !important;
+        height: fit-content !important;
+        &.memberships {
+            min-height: 290px !important;
+            .icon-holder {
+                svg,
+                i {
+                    font-size: 50px;
+                    color: $green-color;
+                }
+            }
+            .group-type-user {
+                display: none;
+            }
+        }
+        padding: 20px;
+        position: relative;
+        transition: $transition;
+        border-radius: 20px;
+        min-height: 500px;
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+        -ms-transition: $transition;
+        -o-transition: $transition;
+        background-color: rgb(255 255 255 / 64%);
+        cursor: pointer;
+        @include maxWidth(sm) {
+            min-height: fit-content;
+        }
+        .logo-icon {
+            width: 63px;
+            margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
+        }
+        .inp-hidd {
+            position: absolute;
+            opacity: 0;
+            left: 0;
+            cursor: pointer;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .title {
+            font-size: 25px;
+            font-weight: bold;
+            // color: $green-color;
+            color: $main-color;
+            transition: 300ms;
+        }
+        &:hover {
+            // background-color: white;
+        }
+        &.active {
+            &.memberships {
+                .group-type-user {
+                    display: flex !important;
+                }
+                .icon-holder {
+                    svg,
+                    i {
+                        color: white;
+                    }
+                }
+            }
+            .title {
+                color: white;
+            }
+            // background-color: $green-color;
+            background-color: $main-color;
+        }
+        .group-type-user {
+            margin: 0 auto;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: fit-content;
+            .card-type-user {
+                height: 50px;
+                width: 250px;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 50px;
+                box-shadow: 0 0 10px 0 rgb(68 68 68 / 10%);
+                transition: 300ms;
+                background-color: white;
+                cursor: pointer;
+                -webkit-transition: 300ms;
+                // color: $green-color;
+                color: $main-color;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                font-size: 16px;
+                -moz-transition: 300ms;
+                -ms-transition: 300ms;
+                -o-transition: 300ms;
+                position: relative;
+                &.active {
+                    // background-color: #beffdd;
+                    background-color: #bddbff;
+                }
+            }
+        }
+    }
+    .next_btn {
+        width: 140px;
+        // background-color: #148b7e;
+        background-color: $main-color;
+        color: white;
+        transition: $transition;
+        &:hover {
+            // background-color: #117e72;
+            background-color: $main-color;
+        }
+    }
+    .content-step-2 {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        .bar-type-user {
+            // color: #00907f70;
+            color: #00408f70;
+            font-weight: bold;
+            font-size: 20px;
+            .title-type-user {
+                &.active {
+                    // color: $green-color;
+                    color: $main-color;
+                }
+            }
+        }
+        .box-register {
+            padding: 2rem;
+            background-color: white;
+            border-radius: 20px;
+            width: 100%;
+            -webkit-box-shadow: 15px 15px 20px 0 rgb(0 150 131 / 8%);
+            box-shadow: 15px 15px 20px 0 rgb(0 150 131 / 8%);
+            -webkit-border-radius: 20px;
+            margin-top: 2rem;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            label {
+                color: $text-color-dark;
+                font-size: 15px;
+                margin-bottom: 2px;
+                font-weight: bold;
+            }
+            .form-control {
+                // border: 1px solid $green-color !important;
+                border: 1px solid $main-color !important;
+                &:focus {
+                    // border: 1px solid $green-color !important;
+                    border: 1px solid $main-color !important;
+                    box-shadow: unset !important;
+                }
+            }
+            .group-cheack {
+                gap: 10px;
+                display: flex;
+                align-items: center;
+                // margin-top: 16px;
+                margin-top: 3px;
+                margin-bottom: 16px;
+                color: $text-color-dark;
+            }
+        }
+    }
+    .submit {
+        color: white;
+        border-radius: 4px;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        padding: 0.5rem 2rem;
+        background-color: $green-color;
+    }
+}
+// End Login
+
+//set-id-code
+.set-id-code {
+    justify-content: space-between !important;
+    gap: 0.5rem !important;
+    max-width: 260px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    .inp-code {
+        width: 37.48px !important;
+        height: 37.48px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #c6c5c5;
+        // color: #009080;
+        color: $main-color;
+        margin: 0 !important;
+        font-size: 23px;
+        transition: $xs-transition;
+        &:focus {
+            border-color: $main-color;
+        }
+    }
+}

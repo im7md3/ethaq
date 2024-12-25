@@ -1,0 +1,89 @@
+// Font Size
+.fs-10px {
+  font-size: 10px;
+}
+.fs-11px {
+  font-size: 11px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fs-13px {
+  font-size: 13px;
+}
+.fs-14px {
+  font-size: 14px;
+}
+.fs-15px {
+  font-size: 15px;
+}
+.fs-16px {
+  font-size: 16px;
+}
+.fs-26px {
+  font-size: 26px;
+}
+// Font Weight
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+// Height & Width
+.h-fit {
+  height: fit-content;
+}
+
+.w-fit {
+  width: fit-content;
+}
+.w-150px {
+  width: 150px;
+}
+
+// Text Color
+.main-color {
+  color: $main-color;
+}
+.green-color {
+  color: $green-color;
+}
+.orange-color {
+  color: $orange-color;
+}
+.blue-dark-color {
+  color: $blue-dark-color;
+}
+.color-777 {
+  color: #777;
+}
+// Background Color
+.section-bg-alt {
+  background-color: $bg-section-alt;
+}
+
+.section-light {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    width: 300px;
+    height: 250px;
+    border-radius: 100px;
+    position: absolute;
+    background: radial-gradient(
+      51.79% 51.79% at 50% 50%,
+      #8ebbff 0.01%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.4;
+    z-index: -1;
+    top: 50%;
+  }
+
+  &::before {
+    left: 130px;
+  }
+  &::after {
+    right: 130px;
+  }
+}

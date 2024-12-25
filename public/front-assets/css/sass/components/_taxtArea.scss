@@ -1,0 +1,298 @@
+.form_content {
+    padding: 11px;
+
+    .contact_content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        label {
+            font-weight: 600;
+            font-size: 16px;
+            color: #212121;
+            margin-bottom: 6px;
+        }
+        small {
+            font-weight: 400;
+            font-size: 12px;
+            color: #212121;
+            opacity: 0.6;
+            margin-top: 4px;
+            display: block;
+        }
+    }
+
+    .contact_content .icons_holder {
+        gap: 3px;
+    }
+
+    .add_voice {
+        cursor: pointer;
+        border: 1px solid #C1C1C1;
+        border-radius: 8px;
+        background-color: white !important;
+        width: 190px;
+        height: 100px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            color: #2E5789;
+            font-size: 50px;
+        }
+    }
+
+    .icon-item {
+        color: #777676;
+    }
+
+    .contact_content .textArea_holder {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .contact_content .textArea_holder > textarea {
+        display: block;
+        padding: 8px 10px;
+        font-size: 16px;
+        width: 100%;
+        min-height: 77px;
+        border: 1px solid #cdcdcd;
+        border-radius: 1px;
+        font-weight: 400;
+        color: #666;
+        transition: $sm-transition;
+    }
+
+    .contact_content .textArea_holder > textarea:focus {
+        box-shadow: unset !important;
+        outline: 0 !important;
+        border-color: $sec-color;
+        // background-color: #f8fffe;
+        background-color: transparent;
+        transition: $sm-transition;
+    }
+
+    .contact_content .textArea_holder > textarea::placeholder {
+        color: #a9a6a6;
+        font-size: 15px;
+    }
+
+    .contact_content .send_btn_holder {
+        align-items: flex-end !important;
+        justify-content: center !important;
+    }
+
+    .contact_content .send_btn_holder .send_btn {
+        position: relative;
+        width: 115px;
+        height: 36px;
+        color: $light-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        gap: 9px;
+        margin-bottom: 2px;
+        background-color: transparent;
+        // background-color: #f8fffe;
+        border-color: $sec-color !important;
+        z-index: 1;
+        overflow: hidden;
+        transition: $sm-transition;
+        border-radius: 2px !important;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
+            background-color: $sec-color !important;
+            z-index: -1;
+            border-radius: 0px 0px 50px 50px;
+            transition: $sm-transition;
+        }
+        &:hover::before {
+            height: 0px;
+        }
+        &:hover {
+            color: $sec-color;
+        }
+    }
+
+    .record_close_btn {
+        padding: 21px 30px !important;
+        font-size: 10px !important;
+    }
+
+    .record_close_btn:focus {
+        box-shadow: none !important;
+    }
+
+    .record_close_btn:hover {
+        background-color: #f5f5f5 !important;
+    }
+
+    .alt-modal-title {
+        padding: 15px !important;
+        color: #333333;
+        font-size: 14px !important;
+    }
+
+    .start_record_btn {
+        width: 90px;
+        height: 90px;
+        font-size: 40px !important;
+    }
+
+    .stop_record_btn {
+        width: 90px;
+        height: 90px;
+        font-size: 50px !important;
+        outline-width: 44px !important;
+    }
+
+    .alt_btn-primary {
+        background-color: #2196f3 !important;
+        border-color: #2196f3 !important;
+        color: #fff;
+    }
+    .stop_record_holder {
+        display: none;
+    }
+
+    .reset_record_holder {
+        display: none;
+    }
+
+    .audio_holder {
+        height: 45px;
+        display: none;
+    }
+
+    .alt_btn-primary:hover {
+        background-color: #0b7fdb !important;
+        border-color: #0b7fdb !important;
+    }
+
+    .alt_btn-success {
+        background-color: #28a745 !important;
+        color: #fff !important;
+        border-color: #28a745 !important;
+    }
+
+    .alt_btn-success:hover {
+        color: #fff !important;
+        background-color: #218838 !important;
+        border-color: #1e7e34 !important;
+    }
+
+    .send-record {
+        pointer-events: none;
+        opacity: 0.2;
+    }
+    .send-record.show {
+        pointer-events: auto;
+        opacity: 1;
+    }
+    .attach-file {
+        position: relative;
+        width: 100%;
+        height: 115px;
+        background-color: white;
+        border: 1px dashed #C8C8C8;
+        border-radius: 8px;
+        .file-inp {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 1;
+        }
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 400;
+            font-size: 15px;
+            text-align: center;
+            color: #767676;
+        }
+    }
+
+    .text-def {
+        color: #5b5b7b;
+    }
+
+
+
+    .show_upload_file li {
+        padding: 11px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .show_upload_file .img_holder {
+        width: 65px;
+        height: 50px;
+        margin-left: 10px;
+    }
+
+    .show_upload_file .img_holder img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .show_upload_file .text_info {
+        width: 100%;
+        font-weight: 700;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #74809d;
+    }
+
+    .show_upload_file .text_info > p {
+        font-size: 14px;
+    }
+
+    .show_upload_file .text_info > small {
+        font-weight: 400;
+    }
+
+    .show_upload_file .delete_file {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 20px;
+        text-align: center;
+        padding-bottom: 3px;
+        border-radius: 50%;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        //   box-shadow: -1px 1px 6px rgb(254 118 118 / 80%);
+        border: none;
+    }
+
+    .show_upload_file .delete_file:hover {
+        color: #fff;
+    }
+
+    .show_upload_file .delete_file {
+        background: $light-red-color;
+        //   box-shadow: -1px 1px 6px rgb(254 118 118 / 80%);
+    }
+    .show-record {
+        audio {
+            width: 100%;
+        }
+    }
+}

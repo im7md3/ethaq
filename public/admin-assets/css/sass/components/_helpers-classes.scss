@@ -1,0 +1,120 @@
+.py-60 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.row-gap-24 {
+    row-gap: 24px;
+}
+
+.content_view {
+    background-color: $white_color;
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+#inp-op {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -99999;
+    opacity: 0;
+}
+.inp-op {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -99999;
+    opacity: 0;
+}
+
+// Btns
+.btn-green {
+    background-color: $green-color;
+    color: white;
+    &:hover {
+        color: white;
+        background-color: $green-color-hover;
+    }
+}
+
+.status_info {
+    padding: 8px 13px;
+    color: $white_color;
+    background-color: $info-color;
+    border-radius: 0.3rem;
+}
+.status_green {
+    padding: 8px 13px;
+    color: $white_color;
+    background-color: $green-color;
+    border-radius: 0.3rem;
+}
+.status_red {
+    padding: 8px 13px;
+    color: $white_color;
+    background-color: $red-color;
+    border-radius: 0.3rem;
+}
+
+//remove arrow input number
+/* Chrome, Safari, Edge, Opera */
+.rmv-arw-inp::-webkit-outer-spin-button,
+.rmv-arw-inp::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+.rmv-arw-inp[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.form-floating > label {
+    left: auto;
+}
+
+.gap-2rem {
+    gap: 2rem;
+}
+
+// set backgrounds Colors
+.grey-background {
+    background-color: #f2f2f2 !important;
+}
+
+// Font Size
+.text-fs-10 {
+    font-size: 10px;
+}
+.text-fs-12 {
+    font-size: 12px;
+}
+.text-fs-13 {
+    font-size: 13px;
+}
+.text-fs-1 {
+    font-size: 14px;
+}
+.text-fs-15 {
+    font-size: 15px;
+}
+.text-fs-2 {
+    font-size: 16px;
+}
+.text-fs-17 {
+    font-size: 17px;
+}
+.text-fs-3 {
+    font-size: 18px;
+}
+.text-fs-4 {
+    font-size: 20px;
+}
+.text-fs-5 {
+    font-size: 25px;
+}
+.text-fs-6 {
+    font-size: 30px;
+}
+
+.text-main-color {
+    color:$main-color !important;
+}

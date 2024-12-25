@@ -1,0 +1,431 @@
+:root {
+    --main-color: #009080;
+}
+
+input[disabled] {
+    background-color: #eee !important;
+}
+
+/* Start Create */
+// #create-contract-app {
+//     min-height: 525px;
+// }
+.create {
+    margin-bottom: 3px;
+}
+.create h4 {
+    font-size: 20px;
+}
+.create ul {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 570px;
+    z-index: 1;
+}
+.create ul::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #bbb;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+    transform: translateY(-50%);
+}
+.create ul.level-2::before {
+    background-image: linear-gradient(to left, var(--main-color) 50%, #bbb 50%);
+}
+.create ul.level-3::before {
+    background-image: none;
+    background-color: var(--main-color);
+}
+.create ul li {
+    border: 1px solid var(--main-color);
+    width: 40px;
+    background-color: white;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+/* End Create */
+/* Start stage one */
+.type h4 {
+    font-size: 23px;
+}
+.type input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+.type form .stage-one .box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: flex-end;
+}
+@media (max-width: 767px) {
+    .type form .stage-one .box {
+        justify-content: center;
+    }
+}
+.type form input[type="radio"] + label {
+    cursor: pointer;
+    position: relative;
+    box-shadow: #bbb 0 0 2px 0, #888 0 0 7px 0;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    min-width: 170px;
+    transition: 300ms;
+    border: 1px solid transparent;
+    text-align: center;
+}
+.type form input[type="radio"]:not(:checked) + label:hover {
+    opacity: 0.7;
+}
+.type form input[type="radio"] + label .check {
+    display: none;
+    color: green;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.type form input[type="radio"]:checked + label {
+    border: 1px solid var(--main-color);
+    box-shadow: #bbb 0 0 2px 0, var(--main-color) 0 0 7px 0;
+}
+.type input[type="radio"]:checked + label .check {
+    display: block;
+}
+.type .model input[type="radio"] + label {
+    padding: 2rem 4rem;
+}
+.type .model input[type="radio"] + label .check {
+    left: 10px;
+    top: 20px;
+}
+.type .model input[type="radio"] + label span {
+    font-size: 40px;
+    color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+    right: 20px;
+}
+.type .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.type .buttons input[type="submit"],
+.type .buttons a,
+.next,
+.submit,
+.type .buttons input[type="reset"] {
+    padding: 0.5rem 6rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 300ms;
+}
+.type .buttons input[type="submit"]:hover,
+.next:hover,
+.submit:hover,
+.type .buttons a:hover,
+.type .buttons input[type="reset"]:hover {
+    box-shadow: #bbb 0 0 2px 0, var(--main-color) 0 0 4px 0;
+}
+.type .buttons input[type="submit"],
+.next,
+.submit,
+.type .buttons a {
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+}
+.back {
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 6rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 300ms;
+}
+.type .buttons input[type="reset"] {
+    background-color: white;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.closed {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.type .new-submit {
+    display: none;
+}
+/* End stage one */
+/* start stage tow */
+.stage-two {
+    position: relative;
+}
+/*.stage-two .box-one {*/
+/*    height: 100vh;*/
+/*    overflow-y: scroll;*/
+/*}*/
+/*.stage-two .box-one::-webkit-scrollbar {*/
+/*    width: 1px;*/
+/*}*/
+/*.stage-two .box-one::-webkit-scrollbar-track {*/
+/*    background: transparent;*/
+/*}*/
+/*.stage-two .box-one::-webkit-scrollbar-thumb {*/
+/*    background: transparent;*/
+/*}*/
+.card-box {
+    /*border: solid 1px #ddd;
+    */
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: 300ms;
+    /*height: 100vh;
+    */
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+}
+.card-box.open {
+    height: 77px;
+}
+.box-form {
+    border: solid 1px #ddd;
+    min-height: calc(100% - 77px);
+}
+.box .card-box > h6 {
+    border: solid 1px #ddd;
+    padding: 1.5rem;
+    border-bottom-color: transparent;
+    height: 77px;
+    background-color: #eee;
+    margin-bottom: 0;
+    color: #777;
+    position: relative;
+}
+
+.box h6 .char {
+    height: 0;
+    position: relative;
+    top: 4px;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 35px;
+    color: #777;
+    display: inline-flex;
+    align-items: center;
+}
+
+.box-form {
+    padding: 1rem;
+}
+.box-form > span {
+    width: 40%;
+}
+.stage-two .box .label {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 0;
+}
+.stage-two .box .label span {
+    color: red;
+}
+.stage-two .box .info {
+    font-size: 14px !important;
+    margin-bottom: 0.5rem !important;
+    width: 100% !important;
+}
+.stage-two .box .box-form input {
+    margin-bottom: 2rem;
+    outline: none;
+    // width: 220px;
+}
+.stage-two .box .box-form select {
+    margin-bottom: 2rem;
+    outline: none;
+    width: 220px;
+
+    padding: 0.5rem 1rem;
+    border: 1px solid #bbb;
+}
+.stage-two .box .box-form .selc {
+    padding: 0.5rem;
+    width: calc(100% / 3 - 3px);
+    margin-bottom: 0;
+}
+.stage-two .box .box-form input[type="checkbox"] {
+    width: 20px;
+    height: 30px;
+}
+.stage-two .box .box-form .text {
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+    max-width: 100px;
+    text-align: center;
+}
+.stage-two .box .box-form .alg {
+    vertical-align: super;
+}
+.stage-two .box .box-form input:focus {
+    outline: none;
+}
+.stage-two .box .search {
+    display: block;
+    text-decoration: none;
+    width: fit-content;
+    background-color: var(--main-color);
+    color: white;
+    margin: 0 auto 1rem;
+    padding: 0.5rem 3rem;
+    border-radius: 5px;
+}
+.stage-two .box-form .items {
+    padding: 0.5rem 3rem;
+    color: var(--main-color);
+    background-color: white;
+    position: relative;
+    transition: 300ms;
+    cursor: pointer;
+    border: 1px var(--main-color) dotted;
+}
+.stage-two .box-form .items:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+.stage-two .box-form .items span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--main-color);
+    color: white;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+}
+.stage-two .box-form .items-inp {
+    background-color: white;
+    z-index: 1000;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    position: absolute;
+    left: 50%;
+    box-shadow: black 0 0 16px 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
+    display: none;
+}
+.stage-two .box-form .items-inp h5 {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    justify-content: space-between;
+}
+.stage-two .box-form .items-inp h5 .close {
+    cursor: pointer;
+    font-family: "Font Awesome 5 Free";
+    font-size: 30px;
+}
+.stage-two .box-form .items-inp .items-child {
+    padding: 1rem;
+    background-color: #eee;
+    margin-bottom: 1rem;
+}
+.stage-two .box-form .items-inp .items-child span .text {
+    margin-left: 20px;
+}
+.stage-two .box-form .items-inp .text {
+    vertical-align: super;
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.stage-two .box-form .items-inp a {
+    display: block;
+    text-decoration: none;
+    width: fit-content;
+    background-color: var(--main-color);
+    color: white;
+    margin: 0 auto 1rem;
+    cursor: pointer;
+    padding: 0.5rem 3rem;
+    border-radius: 5px;
+}
+.stage-two .box-form .items-inp textarea {
+    width: 100%;
+    min-height: 100px;
+}
+.stage-two .box .zoom {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+
+    left: 25px;
+    color: var(--main-color);
+}
+@media (max-width: 991px) {
+    .stage-two .box .zoom {
+        display: none;
+    }
+}
+.stage-two .click-zoom {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    z-index: 5;
+    background-color: white;
+}
+.zoom {
+    cursor: pointer;
+}
+.stage-two .box-two .body-box span {
+    color: var(--main-color);
+}
+
+.stage-three .text {
+    box-shadow: #bbb 0 0 2px 0, #bbb 0 0 7px 0;
+    padding: 1rem;
+    text-align: center;
+}
+.stage-three .text p {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+.stage-three .text p span {
+    font-weight: bold;
+}
+.stage-three .text input {
+    width: 30px;
+    height: 30px;
+}
+/* end stage three */

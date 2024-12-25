@@ -1,0 +1,250 @@
+// Select
+//MAin-Select
+.main-select {
+    border-radius: 4px;
+    padding: 0.2rem;
+    font-size: 13px;
+    transition: $transition;
+    border: 1px solid $light-grey-color;
+    &:focus {
+        box-shadow: 0 0 0 0.25rem rgb(43 166 112 / 25%) !important;
+        outline: none;
+    }
+}
+
+// reset form check
+.form-check {
+    padding-right: 1.5em !important;
+    .form-check-input {
+        float: right;
+        margin-right: -1.5em;
+    }
+    .form-check-label {
+        font-size: 12px;
+    }
+}
+.form-switch {
+    padding-right: 2.5em !important;
+    .form-check-input {
+        width: 2.4em;
+        margin-right: -2.9em !important;
+        &.to-active {
+            &:checked {
+                background-color: #198754;
+                border-color: #198754;
+            }
+            &:focus {
+                border-color: #bbffe1 !important;
+                box-shadow: 0 0 0 0.25rem rgb(25 135 84 / 25%) !important;
+                background-image: url("https://www.svgrepo.com/show/405751/green-circle.svg") !important;
+            }
+        }
+    }
+}
+.parent-form-add {
+    background-color: $light-green-color;
+    border-radius: 10px;
+    border: 1px solid $blue-color;
+    .par-texarea {
+        width: 100%;
+        position: relative;
+        textarea {
+            padding: 12px 10px 0;
+            height: 80px;
+            min-height: unset;
+            border: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+            width: 100%;
+            background-color: transparent;
+            margin: 0;
+            resize: none;
+        }
+        .count-area {
+            position: absolute;
+            left: 20px;
+            font-size: 18px;
+            color: #404040;
+            bottom: 0px;
+        }
+    }
+    .group-send {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-width: 70px;
+        background-color: transparent;
+        border: 0;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+// main inp
+.main-inp {
+    // border: 1px solid #0090805e;
+    border: 1px solid #2e57895e;
+    outline: none;
+    height: 37px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 100%;
+    &[readonly] {
+        background-color: #eee;
+    }
+}
+
+// box inp
+.box-inp {
+    &.filter-inp {
+        padding: 0px;
+    }
+    height: 37px;
+    background-color: white;
+    position: relative;
+    width: 100%;
+    border: 1px solid hsl(213deg 50% 36% / 37%);
+    outline: none;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 15px;
+    z-index: 1;
+    &.filter-inp {
+        select.inp {
+            position: unset !important;
+            // padding-left: 2rem !important;
+            cursor: pointer;
+            padding: 7px 15px 7px 60px !important;
+        }
+    }
+    .icon {
+        position: absolute;
+        cursor: auto;
+        left: 10px;
+        top: 50%;
+        width: 27px;
+        height: 27px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        display: flex;
+        color: $main-color;
+        z-index: -1;
+        background-color: $main-color-sm-light;
+        align-items: center;
+        justify-content: center;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        pointer-events: all;
+        &.icon-success {
+            background-color: $main-color !important;
+            color: white !important;
+        }
+    }
+    input[type="file"].inp {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+    select.inp {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background: 0;
+        left: 0;
+        top: 0;
+        padding: 0 10px;
+        position: absolute;
+        appearance: none;
+    }
+}
+.inp-sub {
+    // background-color: #009080;
+    background-color: $main-color;
+    color: white;
+    font-size: 18px;
+    min-height: 40px;
+    display: flex;
+    padding: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    outline: none;
+    border: none;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    min-width: 200px;
+}
+.small-label {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+.inp-bank {
+    position: relative;
+    &::before {
+        content: "SA";
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        position: absolute;
+        // color: #009080;
+        color: $main-color;
+    }
+    input {
+        padding-right: 31px;
+    }
+}
+.inp-contract {
+    width: 121px !important;
+    background-color: #f1f5f9 !important;
+    border: 1px solid #e1e1e1 !important;
+}
+.inp-p {
+    width: auto !important;
+    min-width: fit-content !important;
+    display: inline-block !important;
+    margin-bottom: 5px;
+}
+
+.amount-input-group {
+    .form-control {
+        flex: 0 0 auto !important;
+        width: 90px !important;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: unset !important;
+        border-bottom-right-radius: unset !important;
+    }
+    .input-group-text {
+        margin-right: -1px;
+        margin-left: unset !important;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: unset !important;
+        border-bottom-left-radius: unset !important;
+    }
+}
+
+.span-label {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
+}

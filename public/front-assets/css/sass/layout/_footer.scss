@@ -1,0 +1,81 @@
+// Start Footer Email
+.email-page {
+    .box-one,
+    .box-two {
+        width: 50%;
+        @include maxWidth(md) {
+            width: auto;
+        }
+    }
+    .box-one {
+        @include maxWidth(md) {
+            flex: 1;
+        }
+    }
+    .box-two {
+        text-align: end;
+        img {
+            width: 290px;
+            height: auto;
+            @include maxWidth(md) {
+                width: 153px;
+            }
+        }
+    }
+    input[type="email"] {
+        border: 1px solid #a3a3a3;
+        border-radius: 6px;
+        padding: 12px;
+        outline: none;
+    }
+    .btn-sub {
+        //   background-color: $green-color;
+        background-color: $main-color;
+        color: $light-color;
+        border: 1px solid $main-color;
+        padding: 8px 37px;
+        box-shadow: 0px 2px 8px rgba(99, 99, 99, 0.2);
+        border-radius: 8px;
+        outline: none;
+    }
+}
+// End Footer Email
+
+// Start Main-Footer
+.main-footer {
+    background-color: $main-color;
+    color: $light-color;
+    padding: 2rem 0;
+      @include maxWidth(mobile) {
+        display: none;
+      }
+    a {
+        color: $light-color;
+    }
+    .logo {
+        width: 190px;
+    }
+    .logo-sm {
+        width: 110px;
+        & > img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .social {
+        .item {
+            padding: 9px 15px;
+            cursor: pointer;
+            color: $light-color;
+            font-size: 20px;
+            transition: 300ms;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            &:hover {
+                box-shadow: 0 0 8px 0 #0000006b;
+                border: 1px solid #005e5214;
+            }
+        }
+    }
+}
+// End Main-Footer
